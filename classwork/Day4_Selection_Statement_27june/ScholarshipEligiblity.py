@@ -15,10 +15,16 @@ Scholarship Approved
 
 """
 print("---------------------------------------")
-mark = int(input())
+#taking input from the user
+mark = int(input("Enter marks in %: "))
+
+# validating the input
 if(mark<0 or mark>100):
     exit("Enter a valid number")
+
 print("--------------------------------------")
+
+#checking if he/she is eligible for scholarship
 if(mark>=90):
     print("Scholarship Approved")
 else:print("Scholarship not approved")
@@ -27,7 +33,7 @@ else:print("Scholarship not approved")
 # output
 """
 -------------------------------------------------
-92 
+Enter marks in %: 92 
 -------------------------------------------------
 Scholarship Approved 
 
