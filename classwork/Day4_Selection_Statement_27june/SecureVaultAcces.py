@@ -13,11 +13,11 @@ Access Granted to the Vault.
 """
 print("---------------------------------")
 #taking input
-pas = int(input())
+pas = int(input("Enter the pass of vault: "))
 
 #validating the input
-if(pas<0 or pas>9999):
-    exit()
+if(pas<999 or pas>9999):
+    exit("Invalid pass enter a 4 digit pass")
 
 print("----------------------------------")
 
@@ -28,7 +28,7 @@ if(pas==7890):
 #output
 """
 ------------------------------------------
-7890 
+Enter the pass of vault: 7890 
 ------------------------------------------
 Access Granted to the Vault.
 """
