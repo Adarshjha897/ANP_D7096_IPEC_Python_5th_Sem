@@ -16,11 +16,12 @@ Delivery Charge = ₹100
 
 print("-------------------------")
 
-weight = int(input())
-#validating the input
+weight = int(input("Enter the weight of courier in Kg: "))
 
+#validating the input
 if(weight<=0):
-    exit()
+    print("______________________________________")
+    exit("Invalid input Enter a positive value.")
 
 print("--------------------------")
 
@@ -33,11 +34,11 @@ elif(weight>2 and weight<=5):
 else:
     print("Delivery Charge = ₹180")
 
-#output
 
+#output
 """
 ----------------------------------
-4 
+Enter the weight of courier in Kg: 4 
 ----------------------------------
 Delivery Charge = ₹100
 
