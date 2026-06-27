@@ -15,9 +15,15 @@ Entry Denied
 
 """
 print("--------------------------")
-pas = int(input())
-if(pas<0 and pas>1):exit()
+#taking input from user
+pas = int(input("Enter 1 if you have pass 0 if you dont have it: "))
+#validating the input
+
+if(pas<0 and pas>1):
+    print("___________________________")
+    exit("Invalid input enter 0 or 1 only")
 print("---------------------------")
+#checking for the pass
 if(pas==1):
     print("Entry allowed")
 else:print("Entery Denied")
@@ -26,9 +32,9 @@ else:print("Entery Denied")
 # output
 
 """
-------------------------------
-0 
-------------------------------
+-------------------------------------------------
+Enter 1 if you have pass 0 if you dont have it: 0 
+-------------------------------------------------
 Entry Denied
 
 """
