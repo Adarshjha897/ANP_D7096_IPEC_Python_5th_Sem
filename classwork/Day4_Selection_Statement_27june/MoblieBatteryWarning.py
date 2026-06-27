@@ -12,14 +12,17 @@ Sample Output
 Connect Charger Immediately
 
 """
+#Taking input from the user
 print("--------------------------------")
-battery = int(input())
+battery = int(input("Enter battery Percentage of youre Device: "))
 
-if(battery<0):
-    exit()
+#validating the input 
+if(battery<0 or battery>100):
+    exit("Invalid input enter between 0 to 100")
 
 print("--------------------------------")
 
+#checking wether the warning is required
 if(battery>=15):
     exit()
 
@@ -29,7 +32,7 @@ print("Connect Charger Immediately")
 
 """
 ------------------------------------------
-10 
+Enter battery Percentage of youre Device: 10 
 ------------------------------------------
 Connect Charger Immediately
 
