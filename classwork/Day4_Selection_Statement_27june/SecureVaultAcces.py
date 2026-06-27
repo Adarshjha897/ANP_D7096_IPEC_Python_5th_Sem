@@ -12,10 +12,16 @@ Access Granted to the Vault.
 
 """
 print("---------------------------------")
+#taking input
 pas = int(input())
-if(pas<0):
+
+#validating the input
+if(pas<0 or pas>9999):
     exit()
+
 print("----------------------------------")
+
+#checking for security code
 if(pas==7890):
     print("Acces Granted to the Vault")
 
