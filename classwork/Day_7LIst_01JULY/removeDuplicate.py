@@ -27,26 +27,30 @@ print("\n\n------------------------------------")
 num = int(input("Enter the number whose duplicate occurence should not be present in the list: "))
 index =0
 #counting the number of occurences of the given number in the list 
+print("-------------------------------------------------------------")
 
 c = numbers.count(num)
 if(c >1):
-	for x in range(20):
-		if(numbers[x]==num):
-			index = x #storing the first index of the given number in the list
-			break
-	for i in range(index+1,20):#removing the duplicate occurence of the given number from the list
-		if(numbers[i]==num):
-			numbers.remove(num)
-
-	
-	# while True:
-	# 	numbers.remove(num)
-	# 	c = numbers.count(num)
-	# 	if(c == 1):
+	# for x in range(20):
+	# 	if(numbers[x]==num):
+	# 		index = x #storing the first index of the given number in the list
 	# 		break
+	# for i in range(index+1,20):#removing the duplicate occurence of the given number from the list
+	# 	if(numbers[i]==num):
+	# 		numbers.remove(num)
+
+	numbers.reverse()
+	while True:
+		if(c>1):numbers.remove(num)
+		c = numbers.count(num)
+		if(c == 1):
+			numbers.reverse()
+			break
+elif(c == 1):
+	print("The given number has only one occurence in the list")
 
 else:
-	print("The given number is not present in the list or it has only one occurence in the list")
+	print("The given number is not present in the list")
 
 #printing the list after removing the duplicate occurence of the given number
 print("The list of numbers after removing the duplicate occurence of the given number is : ", numbers)
