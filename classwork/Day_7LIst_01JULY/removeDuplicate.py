@@ -30,6 +30,7 @@ index =0
 print("-------------------------------------------------------------")
 
 c = numbers.count(num)
+print("The number of occurence of the given number in the list is : ", c)
 if(c >1):
 	# for x in range(20):
 	# 	if(numbers[x]==num):
@@ -54,3 +55,39 @@ else:
 
 #printing the list after removing the duplicate occurence of the given number
 print("The list of numbers after removing the duplicate occurence of the given number is : ", numbers)
+
+#output:
+
+"""
+Enter any 20 numbers
+------------------------------------
+1
+2
+3
+4
+12
+23
+23
+445
+343
+5
+4
+23
+23
+44
+23
+23
+445
+23
+55
+2
+The list of numbers is : [1, 2, 3, 4, 12, 23, 23, 445, 343, 5, 4, 23, 23, 44, 23, 23, 445, 23, 55, 2]
+
+------------------------------------
+Enter the number whose duplicate occurence should not be present in the list: 23
+------------------------------------
+The number of occurence of the given number in the list is : 7
+The list of numbers after removing the duplicate occurence of the given number is :  [1, 2, 3, 4, 12, 23, 445, 343, 5, 4, 44, 445, 55, 2]
+
+
+"""
