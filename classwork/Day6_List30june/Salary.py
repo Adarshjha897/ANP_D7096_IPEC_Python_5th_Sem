@@ -1,4 +1,7 @@
-# take the input of person name and salary check wether he fall in Ews cateogry if his salary is less than 5Lpa
+# take the input of 15 person name and salary store it in the list and we have to check wether 
+# he fall in Ews cateogry
+#  if his salary is less than 5Lpa
+#we have to display the name of person in the Ews category
 #-----------------------------------
 
 
@@ -11,9 +14,9 @@ for i in range(15):
     #taking the name 
     name = input("Enter Name: ")
     
-    #taking age 
+    #taking salary input
     salary = float(input("Enter Salary (in LPA): "))
-    #validating the age
+    #validating the salary
     while salary <= 0:
         print("Salary must be positive. Please enter again.")
         salary = float(input("Enter Salary (in LPA): "))
