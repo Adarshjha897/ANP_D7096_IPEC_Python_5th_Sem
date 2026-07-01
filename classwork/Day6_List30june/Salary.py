@@ -79,7 +79,7 @@ Enter Name: m
 Enter Salary (in LPA): 4.6
 ------------------------------------------------------------
 Enter Name: n
-Enter Salary (in LPA): 5.4
+Enter Salary (in LPA): 4.9
 ------------------------------------------------------------
 Enter Name: o
 Enter Salary (in LPA): 6.6
