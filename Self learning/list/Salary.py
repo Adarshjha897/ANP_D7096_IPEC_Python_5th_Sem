@@ -1,0 +1,1 @@
+# take the input of person name and salary check wether he fall in Ews cateogry if his salary is less than 
