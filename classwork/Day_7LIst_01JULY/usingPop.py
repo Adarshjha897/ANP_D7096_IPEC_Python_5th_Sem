@@ -6,6 +6,7 @@ numbers = []
 print("Enter any 10 numbers")
 print("------------------------------------")
 
+
 for x in range (10):
 #taking input from the user
 
