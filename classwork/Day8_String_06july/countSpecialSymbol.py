@@ -8,7 +8,7 @@ countSpecial = 0 #initializing the count for speacial charracters
 
 print("------------------------------------------------------------")
 for char in sentence:
-    if (not char.isalnum() and not char.isspace()):  # Check if the character is not alphanumeric and not a space
+    if (not char.isalnum()):  # Check if the character is not alphanumeric and not a space
         countSpecial += 1
 
 print(f"Number of special characters: {countSpecial}")#printing the number of special in sentence
