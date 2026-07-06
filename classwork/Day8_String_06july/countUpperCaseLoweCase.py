@@ -15,6 +15,7 @@ for char in sentence:
         #increasing the value of lowecount if lowercase letter found
         lowecount+=1
 
+#printing the values of uppercount and lowercount
 print("The number of uppercase letters in the sentence is: ", uppercount)
 print("........")
 print("The number of lowercase letters in the sentence is: ", lowecount)
