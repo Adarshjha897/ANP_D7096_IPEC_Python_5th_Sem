@@ -82,3 +82,33 @@ while True:
                 found = True
         if not found:
             print("No employees found in this department.")
+
+"""
+SAMPLE OUTPUT FORMAT
+
+--- All Employee Details ---
+ID      Name            Department      Salary
+--------------------------------------------------
+101     Rahul           IT              55000.0
+102     Priya           HR              48000.0
+103     Aman            IT              60000.0
+
+--- Search Result ---
+ID      Name            Department      Salary
+--------------------------------------------------
+102     Priya           HR              48000.0
+
+--- Updated Salaries ---
+ID      Name            Department      Salary
+--------------------------------------------------
+101     Rahul           IT              60500.0
+102     Priya           HR              52800.0
+103     Aman            IT              66000.0
+
+--- Employees in IT Department ---
+ID      Name            Salary
+------------------------------
+101     Rahul           60500.0
+103     Aman            66000.0
+
+"""
