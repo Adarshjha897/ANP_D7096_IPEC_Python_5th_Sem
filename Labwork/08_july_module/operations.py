@@ -29,7 +29,7 @@ if(shape == 1):
         print("perimeter is: ", square_perimeter(side),"meter")
 
 
-if(shape == 2):
+elif(shape == 2):
     op = """Enter 1 for Area and 2 for cirumference"""
     operation = int(input("Enter operation you want to perform"))
     radius = float(input("Enter the radius in m"))
@@ -42,7 +42,7 @@ if(shape == 2):
         print("circumference of circle is: ", circle_circumference(radius), "meter")
 
 
-if(shape == 3):
+elif(shape == 3):
     op = """Enter 1 for Area and 2 for perimeter"""
     operation = int(input("Enter operation you want to perform"))
 
@@ -58,7 +58,7 @@ if(shape == 3):
         print("circumference of circle is: ", triagngle_perimeter(b,h), "meter")
 
 
-if(shape == 3):
+elif(shape == 3):
     op = """Enter 1 for Area and 2 for cirumference"""
     operation = int(input("Enter operation you want to perform"))
 
@@ -75,3 +75,5 @@ if(shape == 3):
         print("Area of circle is : ", rectangle_area(l,b),"meter square")
     elif(operation == 2):
         print("circumference of circle is: ", rectangle_perimeter(l,b), "meter")
+
+else:exit("wrong choice enter it again")
