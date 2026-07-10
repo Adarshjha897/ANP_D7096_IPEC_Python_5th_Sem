@@ -10,7 +10,7 @@ def calculate_simple_interest(principal, rate, time):
 print("---------------------------------------------")
 p = float(input("Enter the principal amount: "))
 r = float(input("Enter the rate of interest: "))
-t = float(input("Enter the time in years: "))
+t = int(input("Enter the time in years: "))
 print("---------------------------------------------")
 # showing output to the user
 print("The simple interest is:", calculate_simple_interest(p, r, t))
