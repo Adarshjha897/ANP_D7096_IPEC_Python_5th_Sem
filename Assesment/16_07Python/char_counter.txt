@@ -1,0 +1,74 @@
+"""
+-------------------------------------------------------------------------------------
+Problem 2: Character Frequency Analyzer 
+Accept a string from the user and perform the following: 
+• Count uppercase letters  
+• Count lowercase letters  
+• Count digits  
+• Count special characters  
+• Print the most frequently occurring character  
+Example: 
+Input: 
+Python@2026 
+Output: 
+Uppercase : 1 
+Lowercase : 5 
+Digits : 4 
+Special Characters : 1 
+Most Frequent Character : 2 
+--------------------------------------------------------------------------------------
+"""
+
+#--------------------
+
+
+#Accept input from user
+user_input = input("Enter a string: ")
+
+#Initialize counters
+uppercase_count = 0
+lowercase_count = 0
+digit_count = 0
+special_count = 0
+
+#Dictionary to store frequency of each character
+frequency = {}
+
+#Iterate through each character in the string
+for ch in user_input:
+    if ch.isupper():          # Check uppercase
+        uppercase_count += 1
+    elif ch.islower():        # Check lowercase
+        lowercase_count += 1
+    elif ch.isdigit():        # Check digit
+        digit_count += 1
+    else:                     # Special character
+        special_count += 1
+    
+    # Count frequency of each character
+    frequency[ch] = frequency.get(ch, 0) + 1
+
+# Step 5: Find the most frequent character
+most_frequent_char = max(frequency, key=frequency.get)
+
+# Print results
+print("Uppercase :", uppercase_count)
+print("Lowercase :", lowercase_count)
+print("Digits :", digit_count)
+print("Special Characters :", special_count)
+print("Most Frequent Character :", most_frequent_char)
+
+"""
+output
+#----------------------------
+
+Enter a sting: Python@2026
+Uppercase : 1
+Lowercase : 5
+Digits : 4
+Special Characters : 1
+Most Frequent Character : 2
+
+"""
+
+
