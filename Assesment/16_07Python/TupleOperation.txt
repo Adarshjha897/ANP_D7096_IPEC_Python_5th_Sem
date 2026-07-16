@@ -1,0 +1,57 @@
+"""
+----------------------------------------------------------------------
+Problem 6: Tuple Operations 
+Create a tuple containing names of 15 students. 
+Perform the following: 
+• Count total students  
+• Display first five students  
+• Display last five students  
+• Search a student name  
+• Count occurrences of a given name  
+• Convert tuple into list and sort alphabetically 
+-----------------------------------------------------------------------
+"""
+# Creating a tuple with 15 student names
+students = (
+    "Adarsh", "Riya", "Aman", "Priya", "Sahil",
+    "Neha", "Karan", "Megha", "Rohit", "Simran",
+    "Arjun", "Sneha", "Vikas", "Pooja", "Rahul"
+)
+
+# Count total students
+print("Total students:", len(students))
+
+# Display first five students
+print("First five students:", students[:5])
+
+# Display last five students
+print("Last five students:", students[-5:])
+
+# Search a student name
+search_name = "Riya"
+if search_name in students:
+    print(f"{search_name} is present in the tuple.")
+else:
+    print(f"{search_name} is not found.")
+
+# Count occurrences of a given name
+count_name = "Adarsh"
+print(f"Occurrences of {count_name}:", students.count(count_name))
+
+# Convert tuple into list and sort alphabetically
+students_list = list(students)
+students_list.sort()
+print("Sorted student list:", students_list)
+
+"""
+output:
+#-------------------------------------------------
+Enter a student name to search: Riya
+Enter a student name to count occurrences: Adarsh
+Total students: 15
+First five students: ('Adarsh', 'Riya', 'Aman', 'Priya', 'Sahil')
+Last five students: ('Arjun', 'Sneha', 'Vikas', 'Pooja', 'Rahul')
+Riya is present in the tuple.
+Occurrences of Adarsh: 1
+Sorted student list: ['Adarsh', 'Aman', 'Arjun', 'Karan', 'Megha', 'Neha', 'Pooja', 'Priya', 'Rahul', 'Riya', 'Rohit', 'Sahil', 'Simran', 'Sneha', 'Vikas']
+"""

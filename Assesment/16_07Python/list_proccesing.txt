@@ -1,0 +1,100 @@
+"""
+-------------------------------------------------------
+Problem 5: List Processing 
+Accept 20 integers from the user into a list. 
+Perform the following: 
+a) Print largest number  
+b) Print second largest number  
+c) Print smallest number  
+d) Remove duplicate elements  
+e) Print only even numbers  
+f) Print numbers divisible by both 3 and 5  
+g) Reverse the list without using reverse() 
+--------------------------------------------------------
+"""
+print("-----------------------------------------------")
+print("             LIST PROCCESSING                 ")
+print("-----------------------------------------------")
+
+# Accept 20 integers from the user
+numbers = []
+print("Enter 20 integers:")
+for i in range(20):
+    num = int(input(f"Enter number {i+1}: "))
+    numbers.append(num)
+print("-----------------------------------------------")
+print("LIST PROCCESSING RESULT                ")
+print("-----------------------------------------------")
+
+# Largest number
+largest = max(numbers)
+print("Largest number:", largest)
+
+# Second largest number
+unique_sorted = sorted(set(numbers), reverse=True)
+if len(unique_sorted) >= 2:
+    second_largest = unique_sorted[1]
+    print("Second largest number:", second_largest)
+else:
+    print("Second largest number does not exist.")
+
+# Smallest number
+smallest = min(numbers)
+print("Smallest number:", smallest)
+
+# Remove duplicate elements
+no_duplicates = list(set(numbers))
+print("List after removing duplicates:", no_duplicates)
+
+# Print only even numbers
+even_numbers = [n for n in numbers if n % 2 == 0]
+print("Even numbers:", even_numbers)
+
+# Print numbers divisible by both 3 and 5
+divisible_by_3_and_5 = [n for n in numbers if n % 3 == 0 and n % 5 == 0]
+print("Numbers divisible by both 3 and 5:", divisible_by_3_and_5)
+
+# Reverse the list without using reverse()
+reversed_list = numbers[::-1]
+print("Reversed list:", reversed_list)
+
+
+
+"""
+
+-------------------------------------------------------
+                    List Processing
+-------------------------------------------------------
+Enter 20 integers:
+Enter number 1: 10
+Enter number 2: 25
+Enter number 3: 30
+Enter number 4: 45
+Enter number 5: 60
+Enter number 6: 75
+Enter number 7: 90
+Enter number 8: 15
+Enter number 9: 20
+Enter number 10: 25
+Enter number 11: 30
+Enter number 12: 35
+Enter number 13: 40
+Enter number 14: 45
+Enter number 15: 50
+Enter number 16: 55
+Enter number 17: 60
+Enter number 18: 65
+Enter number 19: 70
+Enter number 20: 75
+-------------------------------------------------------
+List Processing Results
+-------------------------------------------------------
+a) Largest number: 90
+b) Second largest number: 75
+c) Smallest number: 10
+d) List after removing duplicates: [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 90]
+e) Even numbers: [10, 30, 60, 90, 20, 30, 40, 50, 60, 70]
+f) Numbers divisible by both 3 and 5: [30, 45, 60, 75, 90, 15, 30, 45, 60, 75]
+g) Reversed list: [75, 70, 65, 60, 55, 50, 45, 40, 35, 30, 25, 20, 15, 90, 75, 60, 45, 30, 25, 10]
+-------------------------------------------------------
+"""

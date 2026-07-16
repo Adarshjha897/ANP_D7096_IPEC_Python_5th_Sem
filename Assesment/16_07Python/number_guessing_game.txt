@@ -1,0 +1,43 @@
+"""
+------------------------------------------------------------
+Problem 3: Number Guessing Game 
+Create a number guessing game. 
+Rules: 
+• Secret number = 57  
+• User gets only 7 attempts.  
+• If the user enters a negative number, ignore it using continue.  
+• If the user guesses correctly, terminate using break.  
+• Display the number of attempts used. 
+------------------------------------------------------------
+"""
+secret = 57
+for i in range(7):
+	n = int(input(f"Guess the mumber, you have {7-i} tries left"))
+	if(n == secret):
+		print("-----WINNER---------")
+		print("YOU GUESSED IT RIGHT")
+		exit()
+print("--------YOU LOOSE--------")
+print("  BETTER LUCK NEXT TIME  ")
+
+"""
+output
+#------------------------------------
+
+Guess the mumber, you have 7 tries left 10
+Guess the mumber, you have 6 tries left 20
+Guess the mumber, you have 5 tries left 30
+Guess the mumber, you have 4 tries left 40
+Guess the mumber, you have 3 tries left 50
+Guess the mumber, you have 2 tries left 60
+Guess the mumber, you have 1 tries left 70
+--------YOU LOOSE--------
+  BETTER LUCK NEXT TIME  
+#-------------------------------------
+
+Guess the mumber, you have 7 tries left 10
+Guess the mumber, you have 6 tries left 20
+Guess the mumber, you have 5 tries left 57
+-----WINNER---------
+YOU GUESSED IT RIGHT
+"""

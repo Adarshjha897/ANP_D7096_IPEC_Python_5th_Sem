@@ -1,0 +1,91 @@
+"""
+------------------------------------------------------------------------------
+Problem 7: Student Result Management 
+Create a dictionary where 
+Roll No → Marks 
+Store details of 10 students. 
+Perform: 
+• Find topper  
+• Find average marks  
+• Display students scoring above average  
+• Count failed students (Marks < 35)  
+• Display grade using:  
+ 
+Marks Grade 
+90+ A 
+75-89 B 
+60-74 C 
+35-59 D 
+Below 35 Fail
+-------------------------------------------------------------------------------
+"""
+
+# Student Result Management
+
+# Dictionary: Roll No → Marks
+students = {
+    1: 95,
+    2: 67,
+    3: 88,
+    4: 45,
+    5: 32,
+    6: 76,
+    7: 54,
+    8: 91,
+    9: 29,
+    10: 63
+}
+
+# 1. Find topper
+topper_roll = max(students, key=students.get)
+topper_marks = students[topper_roll]
+print(f"Topper → Roll No {topper_roll}, Marks {topper_marks}")
+
+# 2. Find average marks
+average = sum(students.values()) / len(students)
+print(f"Average Marks → {average:.2f}")
+
+# 3. Display students scoring above average
+print("Students scoring above average:")
+for roll, marks in students.items():
+    if marks > average:
+        print(f"Roll No {roll} → {marks}")
+
+# 4. Count failed students (Marks < 35)
+failed_count = sum(1 for marks in students.values() if marks < 35)
+print(f"Failed Students Count → {failed_count}")
+
+# 5. Display grade for each student
+print("\nGrades:")
+for roll, marks in students.items():
+    if marks >= 90:
+        grade = "A"
+    elif marks >= 75:
+        grade = "B"
+    elif marks >= 60:
+        grade = "C"
+    elif marks >= 35:
+        grade = "D"
+    else:
+        grade = "Fail"
+    print(f"Roll No {roll} → Marks {marks}, Grade {grade}")
+"""
+Topper → Roll No 1, Marks 95
+Average Marks → 64.00
+Students scoring above average:
+Roll No 1 → 95
+Roll No 3 → 88
+Roll No 6 → 76
+Roll No 8 → 91
+Grades:
+Roll No 1 → Marks 95, Grade A
+Roll No 2 → Marks 67, Grade C
+Roll No 3 → Marks 88, Grade B
+Roll No 4 → Marks 45, Grade D
+Roll No 5 → Marks 32, Grade Fail
+Roll No 6 → Marks 76, Grade B
+Roll No 7 → Marks 54, Grade D
+Roll No 8 → Marks 91, Grade A
+Roll No 9 → Marks 29, Grade Fail
+Roll No 10 → Marks 63, Grade C
+"""
