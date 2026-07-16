@@ -1,0 +1,61 @@
+"""
+=================================================
+Problem 4: Employee Salary Calculator 
+calculate_da(basic) 
+calculate_tax(gross_salary) 
+calculate_net_salary(basic) 
+Rules: 
+• HRA = 20%  
+• DA = 10%  
+• Tax = 8% of Gross Salary  
+Input: 
+Basic Salary 
+Output: 
+Basic Salary 
+HRA 
+DA 
+Gross Salary 
+Tax 
+Net Salary 
+===================================================
+"""
+
+# Input: Basic Salary
+basic = float(input("Enter Basic Salary: "))
+if(basic<0):exit("INVALID salary , Try again")
+
+# Calculations
+hra = 0.20 * basic
+da = 0.10 * basic
+gross_salary = basic + hra + da
+tax = 0.08 * gross_salary
+net_salary = gross_salary - tax
+
+# Output
+print()
+print("===== Salary Details =====")
+print("Basic Salary :", basic)
+print("HRA          :", hra)
+print("DA           :", da)
+print("--------------------------")
+print("Gross Salary :", gross_salary)
+print("Tax          :", tax)
+print("--------------------------")
+print("Net Salary   :", net_salary)
+print("===========================")
+
+"""
+output:
+#-------------------------------------
+
+===== Salary Details =====
+Basic Salary : 25000.00
+HRA          : 5000.00
+DA           : 2500.00
+----------------------------
+Gross Salary : 32500.00
+Tax          : 2600.00
+----------------------------
+Net Salary   : 29900.00
+============================
+"""
